@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
+/* 🎨 Warna dasar tema */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
+/* 🌙 Mode gelap pakai class `.dark` */
+.dark {
+  --background: #000000;
+  --foreground: #ededed;
+}
+
+/* ✨ Integrasi Tailwind v4 dengan variabel tema */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ✅ Tambahkan variant agar `dark:` berfungsi */
+@custom-variants dark (&:where(.dark, .dark *));
+
+/* ✨ Transisi global halus dan efek fade saat load */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* biar gak ketutup navbar sticky */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* 🌈 Animasi global untuk elemen yang muncul */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ✨ Efek transisi lembut untuk elemen interaktif */
+a,
+button,
+img,
+.card,
+.service-card {
+  transition: all 0.4s ease-out;
+}
+
+a:hover,
+button:hover,
+.card:hover,
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+/* 🪶 Hover halus untuk tombol dan link */
+button,
+a {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* 🌤️ Animasi lembut untuk section */
+section {
+  transition: background-color 0.7s ease-out, color 0.7s ease-out;
+}
+
+/* 💎 Efek shadow lembut */
+.shadow-smooth {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* ✨ Animasi slide saat elemen muncul di layar */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out forwards;
+}
+
+/* 📱 Responsif heading */
+@media (max-width: 640px) {
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+}
+
+/* 🌊 Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
