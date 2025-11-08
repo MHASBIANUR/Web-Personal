@@ -71,7 +71,7 @@ export default function Hero() {
       <div className="order-1 md:order-2 hidden md:flex relative w-[260px] h-[330px] sm:w-[320px] sm:h-[420px] md:w-[400px] md:h-[550px] justify-center md:justify-end flex-1">
         <div className="relative w-full h-full overflow-hidden">
           <Image
-            src="/myfoto11.jpg"
+            src="/-myfoto11.jpg"
             alt="Profile"
             fill
             className="object-contain"
