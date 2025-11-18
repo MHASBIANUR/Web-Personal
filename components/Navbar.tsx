@@ -56,7 +56,7 @@ export default function Navbar() {
     >
       <nav className="flex items-center justify-between py-5 px-6 md:px-20 max-w-[1400px] mx-auto">
         {/* Logo */}
-        <h1 className={`text-2xl tracking-[3px] font-semibold ${textColor}`}>
+        <h1 className={`text-2xl mt-3 tracking-[3px] ${textColor}`}>
           M.H
         </h1>
 

@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="max-w-xl text-center md:text-left flex-1 space-y-4 order-2 md:order-1">
         <p
           className={`text-xs md:text-sm font-medium tracking-[0.3em] uppercase ${
-            theme === "dark" ? "text-[#e0a899]" : "text-[#7b2d26]"
+            theme === "dark" ? "text-[#e0a899]" : "text-[#6f1d1b]"
           }`}
         >
           Hello, I am
