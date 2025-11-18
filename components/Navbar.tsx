@@ -56,7 +56,7 @@ export default function Navbar() {
     >
       <nav className="flex items-center justify-between py-5 px-6 md:px-20 max-w-[1400px] mx-auto">
         {/* Logo */}
-        <h1 className={`text-2xl mt-3 tracking-[3px] ${textColor}`}>
+        <h1 className={`text-2xl mt-3 font-semibold tracking-[3px] ${textColor}`}>
           M.H
         </h1>
 
@@ -78,11 +78,10 @@ export default function Navbar() {
                     {item}
                     <span
                       className={`absolute left-0 -bottom-1 h-0.5 rounded-full transition-all duration-300
-                      ${
-                        isActive
+                      ${isActive
                           ? "w-full bg-[#6f1d1b]"
                           : "w-0 bg-[#6f1d1b] group-hover:w-full"
-                      }`}
+                        }`}
                     />
                   </Link>
                 </li>
@@ -91,13 +90,15 @@ export default function Navbar() {
           </ul>
 
           {/* Theme Toggle */}
+          {/* Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-300 hover:scale-110 shadow-sm"
+            className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-black dark:text-white transition-all duration-300 hover:scale-110 shadow-sm"
             aria-label="Toggle Dark Mode"
           >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
           </button>
+
 
           {/* Mobile Menu Button */}
           <button
@@ -130,11 +131,10 @@ export default function Navbar() {
                     {item}
                     <span
                       className={`absolute left-0 -bottom-1 h-0.5 rounded-full transition-all duration-300
-                      ${
-                        isActive
+                      ${isActive
                           ? "w-full bg-[#6f1d1b]"
                           : "w-0 bg-[#6f1d1b] group-hover:w-full"
-                      }`}
+                        }`}
                     />
                   </Link>
                 </li>
