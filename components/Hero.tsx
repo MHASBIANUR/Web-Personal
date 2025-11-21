@@ -40,7 +40,7 @@ export default function Hero() {
             theme === "dark" ? "text-gray-300" : "text-[#4b5563]"
           }`}
         >
-          Frontend Developer
+          Fullstack Developer
         </p>
 
         {/* Social Links */}

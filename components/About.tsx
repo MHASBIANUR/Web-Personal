@@ -9,8 +9,18 @@ import {
   FaNodeJs,
   FaGitAlt,
 } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiExpress,
+  SiPostgresql,
+  SiPrisma
+} from "react-icons/si";
+
 import { useTheme } from "next-themes";
+
 
 export default function About() {
   const { theme } = useTheme();
@@ -20,30 +30,34 @@ export default function About() {
     { icon: <FaCss3Alt className="text-[#1572B6]" />, name: "CSS" },
     { icon: <FaJsSquare className="text-[#f7df1e]" />, name: "JavaScript" },
     { icon: <FaReact className="text-[#61DBFB]" />, name: "React" },
-    { icon: <SiNextdotjs className="text-black dark:text-white" />, name: "Next.js" },
+    { icon: <SiNextdotjs className="text-black" />, name: "Next.js" },
     { icon: <SiTailwindcss className="text-[#38bdf8]" />, name: "Tailwind" },
     { icon: <FaNodeJs className="text-[#6cc24a]" />, name: "Node.js" },
+    { icon: <SiExpress className="text-black" />, name: "Express.js" },
+    { icon: <SiPostgresql className="text-[#31648c]" />, name: "PostgreSQL" },
+    { icon: <SiPrisma className="text-[#0c344b]" />, name: "Prisma ORM" },
     { icon: <SiTypescript className="text-[#3178c6]" />, name: "TypeScript" },
     { icon: <FaGitAlt className="text-[#f1502f]" />, name: "Git" },
   ];
 
+
   const services = [
     {
       img: "/02.svg",
-      title: "Frontend Development",
-      desc: "Developing responsive and dynamic websites using modern tools.",
+      title: "Fullstack Web Development",
+      desc: "Building complete web applications from frontend UI to backend APIs and databases.",
       delay: 0.1,
     },
     {
       img: "/03.svg",
-      title: "React & Next.js",
-      desc: "Building modern web apps with React and Next.js for SPA and SSR.",
+      title: "Frontend Engineering",
+      desc: "Creating responsive, clean, and interactive user interfaces using React, Next.js, and Tailwind CSS.",
       delay: 0.3,
     },
     {
       img: "/01.svg",
-      title: "Responsive Design",
-      desc: "Crafting mobile-friendly and visually appealing layouts with Tailwind CSS and CSS3.",
+      title: "Backend & API Development",
+      desc: "Developing scalable REST APIs with Node.js, Express, Prisma, and both SQL/NoSQL databases.",
       delay: 0.5,
     },
   ];
@@ -78,7 +92,7 @@ export default function About() {
 
       {/* Content Section */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-16">
-        
+
         {/* Text */}
         <motion.div
           className="flex-1 text-justify text-base sm:text-lg leading-relaxed space-y-5"
@@ -88,15 +102,15 @@ export default function About() {
           viewport={{ once: true }}
         >
           <p>
-            Hi, I’m <b className="text-[#6f1d1b] dark:text-[#e0a899]">M. Hasbianur</b>, a Frontend Developer who loves
-            crafting, modern, and user-friendly web interfaces.
+            Hi, I’m <b className="text-[#6f1d1b] dark:text-[#e0a899]">M. Hasbianur</b>, a Fullstack Developer who builds
+            end-to-end web applications — from interactive interfaces to fast and scalable backend services.
           </p>
 
           <p>
-            I focus on building seamless digital experiences using technologies like React, Next.js, and Tailwind CSS —
-            ensuring every line of code not only works efficiently but also delivers great design consistency across devices.
+            I work with technologies like React, Next.js, Node.js, Express, SQL/NoSQL, and modern UI frameworks to deliver
+            efficient, secure, and user-focused digital experiences. I enjoy transforming ideas into products that work smoothly
+            across devices and platforms.
           </p>
-
           <div className="mt-8">
             <button
               className={`border px-8 py-3 rounded-none uppercase tracking-[2px] font-semibold transition-all duration-300
