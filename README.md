@@ -7,7 +7,7 @@ Web Personal adalah website portofolio pribadi yang dirancang untuk menampilkan 
 ---
 
 ## 📸 Tampilan
-![Landing Page Preview](public/projectt4.jpg)
+![Landing Page Preview](public/project4.jpg)
 
 ---
 
